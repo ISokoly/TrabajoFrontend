@@ -20,10 +20,10 @@ interface Product {
 })
 export class PrincipalComponent {
   topLeftLinks = [
-    { label: 'About Us', href: '#' },
-    { label: 'My Account', href: '#' },
-    { label: 'Wishlist', href: '#' },
-    { label: 'Order Tracking', href: '#' },
+    { label: 'About Us', href: '' },
+    { label: 'My Account', href: '' },
+    { label: 'Wishlist', href: '' },
+    { label: 'Order Tracking', href: '' },
   ];
 
   topRightInfo = [
@@ -45,15 +45,15 @@ export class PrincipalComponent {
   ];
 
   navigationLinks = [
-    { label: 'Deals', href: '#' },
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Shop', href: '#' },
-    { label: 'Vendors', href: '#' },
-    { label: 'Mega menu', href: '#', bold: true },
-    { label: 'Blog', href: '#' },
-    { label: 'Pages', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'Deals', href: '' },
+    { label: 'Home', href: '' },
+    { label: 'About', href: '' },
+    { label: 'Shop', href: '' },
+    { label: 'Vendors', href: '' },
+    { label: 'Mega menu', href: '', bold: true },
+    { label: 'Blog', href: '' },
+    { label: 'Pages', href: '' },
+    { label: 'Contact', href: '' },
   ];
 
   supportInfo = {
@@ -231,17 +231,17 @@ export class PrincipalComponent {
     {
       name: 'Everyday Fresh & Clean with Our Products',
       image: 'https://storage.googleapis.com/a1aa/image/695cca43-904d-4010-0cbf-aa705f5de50e.jpg',
-      bgColor: 'F0E8D5',
+      bgColor: '#F0E8D5',
     },
     {
       name: 'Make your Breakfast Healthy and Easy',
       image: 'https://storage.googleapis.com/a1aa/image/ac543f45-0860-4a8a-9fba-495643fe05c3.jpg',
-      bgColor: 'F3E8E8',
+      bgColor: '#F3E8E8',
     },
     {
       name: 'The best Organic Products Online',
       image: 'https://storage.googleapis.com/a1aa/image/ba65c299-eb1a-4ea1-443a-22d816af93e2.jpg',
-      bgColor: 'E7EAF3',
+      bgColor: '#E7EAF3',
     },
   ];
 
@@ -432,13 +432,13 @@ export class PrincipalComponent {
   ];
 
   companyLinks = [
-    { label: 'About Us', url: '#' },
-    { label: 'Delivery Information', url: '#' },
-    { label: 'Privacy Policy', url: '#' },
-    { label: 'Terms & Conditions', url: '#' },
-    { label: 'Contact Us', url: '#' },
-    { label: 'Support Center', url: '#' },
-    { label: 'Careers', url: '#' }
+    { label: 'About Us', url: '' },
+    { label: 'Delivery Information', url: '' },
+    { label: 'Privacy Policy', url: '' },
+    { label: 'Terms & Conditions', url: '' },
+    { label: 'Contact Us', url: '' },
+    { label: 'Support Center', url: '' },
+    { label: 'Careers', url: '' }
   ];
 
   categories_sub: { name: string; active: boolean }[] = [
@@ -452,33 +452,33 @@ export class PrincipalComponent {
   ];
 
   accountLinks = [
-    { label: 'Sign In', url: '#' },
-    { label: 'View Cart', url: '#' },
-    { label: 'My Wishlist', url: '#' },
-    { label: 'Track My Order', url: '#' },
-    { label: 'Help Ticket', url: '#' },
-    { label: 'Shipping Details', url: '#' },
-    { label: 'Compare products', url: '#' }
+    { label: 'Sign In', url: '' },
+    { label: 'View Cart', url: '' },
+    { label: 'My Wishlist', url: '' },
+    { label: 'Track My Order', url: '' },
+    { label: 'Help Ticket', url: '' },
+    { label: 'Shipping Details', url: '' },
+    { label: 'Compare products', url: '' }
   ];
 
   corporateLinks = [
-    { label: 'Become a Vendor', url: '#' },
-    { label: 'Affiliate Program', url: '#' },
-    { label: 'Farm Business', url: '#' },
-    { label: 'Farm Careers', url: '#' },
-    { label: 'Our Suppliers', url: '#' },
-    { label: 'Accessibility', url: '#' },
-    { label: 'Promotions', url: '#' }
+    { label: 'Become a Vendor', url: '' },
+    { label: 'Affiliate Program', url: '' },
+    { label: 'Farm Business', url: '' },
+    { label: 'Farm Careers', url: '' },
+    { label: 'Our Suppliers', url: '' },
+    { label: 'Accessibility', url: '' },
+    { label: 'Promotions', url: '' }
   ];
 
   popularLinks = [
-    { label: 'Milk & Flavoured Milk', url: '#' },
-    { label: 'Butter and Margarine', url: '#' },
-    { label: 'Eggs Substitutes', url: '#' },
-    { label: 'Mayonnaise', url: '#' },
-    { label: 'Sour Cream and Dips', url: '#' },
-    { label: 'Tuna & Sandwiches', url: '#' },
-    { label: 'Cheese', url: '#' }
+    { label: 'Milk & Flavoured Milk', url: '' },
+    { label: 'Butter and Margarine', url: '' },
+    { label: 'Eggs Substitutes', url: '' },
+    { label: 'Mayonnaise', url: '' },
+    { label: 'Sour Cream and Dips', url: '' },
+    { label: 'Tuna & Sandwiches', url: '' },
+    { label: 'Cheese', url: '' }
   ];
 
   currentSlide: number = 1; // El primer slide es el inicial
