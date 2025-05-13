@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 interface Product {
   name: string;
@@ -44,7 +44,7 @@ export class PrincipalComponent {
     { icon: 'fa-user', label: 'Account' },
   ];
 
-    navigationLinks = [
+  navigationLinks = [
     { label: 'Deals', href: '#' },
     { label: 'Home', href: '#' },
     { label: 'About', href: '#' },
@@ -141,6 +141,7 @@ export class PrincipalComponent {
       label: 'Hot',
       labelClass: 'bg-pink-500',
       image: 'https://storage.googleapis.com/a1aa/image/76e82885-07b9-488f-3a56-8085276e80d0.jpg',
+      category: 'Vegetables'
     },
     {
       name: 'All Natural Italian-Style Chicken Meatballs',
@@ -150,6 +151,7 @@ export class PrincipalComponent {
       label: 'Sale',
       labelClass: 'bg-blue-500',
       image: 'https://storage.googleapis.com/a1aa/image/2c6a33df-69bc-4d7c-97e6-3d14b4a2f116.jpg',
+      category: 'Meats'
     },
     {
       name: 'Angie\'s Boomchickapop Sweet & Salty Kettle Corn',
@@ -159,6 +161,7 @@ export class PrincipalComponent {
       label: 'Hot',
       labelClass: 'bg-green-600',
       image: 'https://storage.googleapis.com/a1aa/image/fe79b7f6-14e5-4002-a6d7-9658336ae749.jpg',
+      category: 'Pet Foods'
     },
     {
       name: 'Foster Farms Takeout Crispy Classic Buffalo Wings',
@@ -166,6 +169,7 @@ export class PrincipalComponent {
       price: 17.85,
       oldPrice: 19.8,
       image: 'https://storage.googleapis.com/a1aa/image/2f22f07b-c9a2-403b-b817-a0613233112b.jpg',
+      category: 'Meats'
     },
     {
       name: 'Blue Diamond Almonds Lightly Salted Vegetables',
@@ -175,6 +179,7 @@ export class PrincipalComponent {
       label: 'Hot',
       labelClass: 'bg-yellow-400',
       image: 'https://storage.googleapis.com/a1aa/image/5e84fbdb-e371-43fa-a314-dbf67a944556.jpg',
+      category: 'Vegetables'
     },
     {
       name: 'Chobani Complete Vanilla Greek Yogurt',
@@ -182,6 +187,7 @@ export class PrincipalComponent {
       price: 54.85,
       oldPrice: 55.8,
       image: 'https://storage.googleapis.com/a1aa/image/52532e25-3ef4-46bf-7f8c-ebbe1c38b2d7.jpg',
+      category: 'Milk & Dairies'
     },
     {
       name: 'Cananda Dry Ginger Ale - 2 L Bottle - 200ml - 400g',
@@ -189,6 +195,7 @@ export class PrincipalComponent {
       price: 32.85,
       oldPrice: 55.8,
       image: 'https://storage.googleapis.com/a1aa/image/134a0012-44a8-4626-0b62-54c8b8f7bb2f.jpg',
+      category: 'Coffes & Teas'
     },
     {
       name: 'Encore Seafoods Stuffed Alaskan Salmon',
@@ -198,6 +205,7 @@ export class PrincipalComponent {
       label: 'Sale',
       labelClass: 'bg-blue-500',
       image: 'https://storage.googleapis.com/a1aa/image/f5a93c9e-bd88-4286-2a18-167c6f78a043.jpg',
+      category: 'Meats'
     },
     {
       name: 'Gorton\'s Beer Battered Fish Fillets with soft pepper',
@@ -207,6 +215,7 @@ export class PrincipalComponent {
       label: 'Hot',
       labelClass: 'bg-pink-600',
       image: 'https://storage.googleapis.com/a1aa/image/8fb59c8a-06d5-4fa3-fe46-501bd20ff665.jpg',
+      category: 'Meats'
     },
     {
       name: 'Haagen-Daaz Caramel Cone Ice Cream Ketchup',
@@ -214,23 +223,25 @@ export class PrincipalComponent {
       price: 32.85,
       oldPrice: 34.6,
       image: 'https://storage.googleapis.com/a1aa/image/8c435f10-81fa-414e-5c61-f8536d880222.jpg',
+      category: 'Fruits'
     }
   ];
+
   items = [
     {
       name: 'Everyday Fresh & Clean with Our Products',
       image: 'https://storage.googleapis.com/a1aa/image/695cca43-904d-4010-0cbf-aa705f5de50e.jpg',
-      bgColor: 'yellow',
+      bgColor: 'F0E8D5',
     },
     {
       name: 'Make your Breakfast Healthy and Easy',
       image: 'https://storage.googleapis.com/a1aa/image/ac543f45-0860-4a8a-9fba-495643fe05c3.jpg',
-      bgColor: 'pink',
+      bgColor: 'F3E8E8',
     },
     {
       name: 'The best Organic Products Online',
       image: 'https://storage.googleapis.com/a1aa/image/ba65c299-eb1a-4ea1-443a-22d816af93e2.jpg',
-      bgColor: 'blue',
+      bgColor: 'E7EAF3',
     },
   ];
 
@@ -309,88 +320,88 @@ export class PrincipalComponent {
       image: 'https://storage.googleapis.com/a1aa/image/7c98a1ee-e8b9-4a9f-7c31-599adb44f1e4.jpg'
     }
   ];
-  
- topSellingProducts = [
-  {
-    name: 'Nestle Original Coffee-Mate Coffee Creamer',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/5aa1b931-3d33-417d-47b1-b622a7977a46.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'Nestle Original Coffee-Mate Coffee Creamer',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/55def763-bdfb-4788-191b-149f1f721e21.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'Nestle Original Coffee-Mate Coffee Creamer',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/ffe06540-9017-42dd-216d-cd74fe6bb3bc.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  }
-];
- trendingProducts = [
-  {
-    name: 'Organic Cage-Free Grade A Large Brown Eggs',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/7128eb2e-6c67-474d-570f-559f09bbf073.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/ff5b29fa-a486-465c-af3f-f8806d40075d.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'Naturally Flavored Cinnamon Vanilla Light Roast Coffee',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/2dbe4906-d118-40cb-de22-8c7f4d9b697d.jpg',
-    price: '$32.85',
-    originalPrice: '$55.8',
-  }
-];
- recentlyAddedProducts = [
-  {
-    name: 'Pepperidge Farm Farmhouse Hearty White Bread',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/078233fc-5a2e-4b0b-01e3-b564c1ffd81d.jpg',
-    price: '$32.85',
-    originalPrice: '$45.8',
-  },
-  {
-    name: 'Organic Frozen Triple Berry Blend',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/a2e8dc68-d139-4d27-2d60-c9b7110c5d18.jpg',
-    price: '$32.85',
-    originalPrice: '$33.0',
-  },
-  {
-    name: 'Oroweat Country Buttermilk Bread',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/19b6849b-3460-481d-f86b-62ad7e783b79.jpg',
-    price: '$32.85',
-    originalPrice: '$32.0',
-  }
-];
 
-topRatedProducts = [
-  {
-    name: 'Foster Farms Takeout Crispy Classic Buffalo Wings',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/2f22f07b-c9a2-403b-b817-a0613233112b.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'Angie\'s Boomchickapop Sweet & Salty Kettle Corn',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/fe79b7f6-14e5-4002-a6d7-9658336ae749.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  },
-  {
-    name: 'All Natural Italian-Style Chicken Meatballs',
-    imageUrl: 'https://storage.googleapis.com/a1aa/image/2c6a33df-69bc-4d7c-97e6-3d14b4a2f116.jpg',
-    price: '$32.85',
-    originalPrice: '$35.8',
-  }
-];
+  topSellingProducts = [
+    {
+      name: 'Nestle Original Coffee-Mate Coffee Creamer',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/5aa1b931-3d33-417d-47b1-b622a7977a46.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'Nestle Original Coffee-Mate Coffee Creamer',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/55def763-bdfb-4788-191b-149f1f721e21.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'Nestle Original Coffee-Mate Coffee Creamer',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/ffe06540-9017-42dd-216d-cd74fe6bb3bc.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    }
+  ];
+  trendingProducts = [
+    {
+      name: 'Organic Cage-Free Grade A Large Brown Eggs',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/7128eb2e-6c67-474d-570f-559f09bbf073.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/ff5b29fa-a486-465c-af3f-f8806d40075d.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'Naturally Flavored Cinnamon Vanilla Light Roast Coffee',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/2dbe4906-d118-40cb-de22-8c7f4d9b697d.jpg',
+      price: '$32.85',
+      originalPrice: '$55.8',
+    }
+  ];
+  recentlyAddedProducts = [
+    {
+      name: 'Pepperidge Farm Farmhouse Hearty White Bread',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/078233fc-5a2e-4b0b-01e3-b564c1ffd81d.jpg',
+      price: '$32.85',
+      originalPrice: '$45.8',
+    },
+    {
+      name: 'Organic Frozen Triple Berry Blend',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/a2e8dc68-d139-4d27-2d60-c9b7110c5d18.jpg',
+      price: '$32.85',
+      originalPrice: '$33.0',
+    },
+    {
+      name: 'Oroweat Country Buttermilk Bread',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/19b6849b-3460-481d-f86b-62ad7e783b79.jpg',
+      price: '$32.85',
+      originalPrice: '$32.0',
+    }
+  ];
+
+  topRatedProducts = [
+    {
+      name: 'Foster Farms Takeout Crispy Classic Buffalo Wings',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/2f22f07b-c9a2-403b-b817-a0613233112b.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'Angie\'s Boomchickapop Sweet & Salty Kettle Corn',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/fe79b7f6-14e5-4002-a6d7-9658336ae749.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    },
+    {
+      name: 'All Natural Italian-Style Chicken Meatballs',
+      imageUrl: 'https://storage.googleapis.com/a1aa/image/2c6a33df-69bc-4d7c-97e6-3d14b4a2f116.jpg',
+      price: '$32.85',
+      originalPrice: '$35.8',
+    }
+  ];
 
   features = [
     {
@@ -430,6 +441,16 @@ topRatedProducts = [
     { label: 'Careers', url: '#' }
   ];
 
+  categories_sub: { name: string; active: boolean }[] = [
+    { name: 'All', active: true },
+    { name: 'Milk & Dairies', active: false },
+    { name: 'Coffes & Teas', active: false },
+    { name: 'Pet Foods', active: false },
+    { name: 'Meats', active: false },
+    { name: 'Vegetables', active: false },
+    { name: 'Fruits', active: false },
+  ];
+
   accountLinks = [
     { label: 'Sign In', url: '#' },
     { label: 'View Cart', url: '#' },
@@ -459,8 +480,8 @@ topRatedProducts = [
     { label: 'Tuna & Sandwiches', url: '#' },
     { label: 'Cheese', url: '#' }
   ];
-  
-    currentSlide: number = 1; // El primer slide es el inicial
+
+  currentSlide: number = 1; // El primer slide es el inicial
 
   // Función para ir al siguiente slide
   nextSlide() {
@@ -470,5 +491,22 @@ topRatedProducts = [
   // Función para ir al slide anterior
   previousSlide() {
     this.currentSlide = this.currentSlide === 1 ? 2 : 1; // Alterna entre 1 y 2
+  }
+  get selectedCategory(): string {
+    return this.categories_sub.find(cat => cat.active)?.name || 'All';
+  }
+
+  get filteredProducts() {
+    const selected = this.selectedCategory;
+    return selected === 'All'
+      ? this.products
+      : this.products.filter(p => p.category === selected);
+  }
+
+  selectCategory(name: string) {
+    this.categories_sub = this.categories_sub.map(cat => ({
+      ...cat,
+      active: cat.name === name,
+    }));
   }
 }
