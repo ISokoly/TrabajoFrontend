@@ -1,0 +1,16 @@
+    <header class="max-w-[1200px] mx-auto px-6 sm:px-10 py-6 flex items-center justify-between">
+        <div class="font-bold text-lg sm:text-xl text-[#2e2e7e]">
+            SAAS
+        </div>
+
+        <nav class="hidden md:flex space-x-8 text-[13px] text-[#1a1a1a] font-normal">
+            <a *ngFor="let link of navLinks" [href]="link.href" [ngClass]="link.classes">
+                {{ link.label }}
+            </a>
+        </nav>
+
+        <button
+            class="hidden md:block bg-white text-[#2e2e7e] text-[13px] font-semibold rounded-md px-4 py-1.5 hover:bg-[#f0f1f7] transition">
+            Sign Up
+        </button>
+    </header>

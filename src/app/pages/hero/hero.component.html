@@ -1,0 +1,224 @@
+        <!-- Hero Section -->
+        <section class="relative flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20 mt-6 md:mt-12">
+            <div class="md:w-1/2 max-w-md">
+                <div class="text-[11px] font-semibold text-[#2e2e7e] mb-2 tracking-widest">SMART PAYMENTS</div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight max-w-[350px]">
+                    The Next <span>Generation</span><br />
+                    Payment <span class="text-[#4b3bff]">Method</span>
+                </h1>
+
+                <p class="text-[13px] text-[#6b6b6b] mt-3 max-w-[350px]">
+                    Yet preference connection unpleasant yet melancholy but end appearance. And excellence partially
+                    estimating terminated day everything.
+                </p>
+
+                <div class="mt-6 flex gap-4">
+                    <button *ngFor="let btn of buttons"
+                        [ngClass]="btn.classes + ' text-[13px] font-semibold rounded-md px-5 py-2 hover:bg-[#f0f1f7] transition'">
+                        <i *ngIf="btn.icon" [class]="btn.icon"></i> {{ btn.text }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative">
+                <div class="absolute top-0 right-0 w-[280px] h-[280px] rounded-full bg-gradient-to-b from-[#4b3bff] to-[#1a1a4a] -z-10"
+                    style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%)"></div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div *ngFor="let card of dataCards" class="bg-white rounded-lg p-4 shadow-md"
+                        [ngClass]="{'flex flex-col justify-center': card.type === 'slider', 'flex flex-col items-center': card.text, '': !card.text && card.type !== 'slider'}">
+                        <ng-container [ngSwitch]="card.type">
+                            <ng-container *ngSwitchCase="'image'">
+                                <div *ngIf="card.text" class="text-[13px] font-semibold mb-2">{{ card.text }}</div>
+                                <img [src]="card.src" [alt]="card.alt" class="mx-auto" width="100" height="100" />
+                            </ng-container>
+
+                            <ng-container *ngSwitchCase="'slider'">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[13px] font-semibold">{{ card.label }}</span>
+                                    <input type="range" min="0" max="100" [value]="card.value"
+                                        class="w-full ml-3 accent-[#4b3bff]" />
+                                </div>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Logos Section -->
+        <section class="mt-20 flex justify-center gap-1 opacity-40 max-w-[900px] mx-auto">
+            <img *ngFor="let logo of clientLogos" [src]="logo.src" [alt]="logo.alt"
+                class="w-[300px] h-[80px] object-cover rounded" />
+
+        </section>
+        <!-- Features Section -->
+        <section class="mt-24 max-w-[900px] mx-auto px-4 sm:px-0">
+            <div *ngFor="let content of featuresContent">
+                <div class="text-[11px] font-semibold text-[#2e2e7e] mb-2 tracking-widest">
+                    {{ content.label }}
+                </div>
+                <h2 class="text-xl sm:text-2xl font-extrabold max-w-[400px] leading-tight">
+                    <span *ngFor="let line of content.title.split('.')">{{ line }}<br /></span>
+                </h2>
+                <p class="text-[13px] text-[#6b6b6b] mt-3 max-w-[400px]">
+                    {{ content.text }}
+                </p>
+                <a class="inline-flex items-center text-[#4b3bff] text-[13px] font-semibold mt-4 hover:underline"
+                    [href]="content.linkHref">
+                    {{ content.linkText }}
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="relative mt-12 flex flex-col md:flex-row md:items-center gap-6">
+                <img class="rounded-md shadow-md md:w-1/2"
+                    src="https://storage.googleapis.com/a1aa/image/a46c185f-bfca-4166-8592-1f366e849bcf.jpg"
+                    alt="Three people working together" width="300" height="200" />
+
+                <div aria-label="Watch video button"
+                    class="absolute -top-2 right-105 bg-[#4b3bff] rounded-md w-25 h-25 flex items-center justify-center cursor-pointer shadow-lg">
+                    <i class="fas fa-play text-white text-2xl"></i>
+                    <span class="sr-only">Watch video</span>
+                </div>
+
+                <div class="md:w-1/2 relative">
+
+
+                    <div class="pl-0 md:pl-12 mt-16 md:mt-0" *ngFor="let section of videoSection">
+                        <div class="text-[11px] font-semibold text-[#2e2e7e] mb-2 tracking-widest">
+                            {{ section.label }}
+                        </div>
+                        <h3 class="text-lg font-extrabold max-w-[350px] leading-tight">
+                            {{ section.title }}
+                        </h3>
+                        <p class="text-[13px] text-[#6b6b6b] mt-3 max-w-[350px]">
+                            {{ section.text }}
+                        </p>
+
+                        <div class="mt-6 grid grid-cols-2 gap-2 max-w-[350px] text-[13px] text-[#6b6b6b]">
+                            <div class="flex items-center gap-2" *ngFor="let service of services">
+                                <i class="far fa-check-square text-[#4b3bff]"></i>
+                                <span>{{ service }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Deal Section -->
+        <section
+            class="mt-24 max-w-[900px] mx-auto px-4 sm:px-0 flex flex-col md:flex-row items-center md:items-start gap-10">
+            <div class="md:w-1/2">
+                <h3 class="text-lg font-extrabold max-w-[350px] leading-tight mb-6">
+                    Find a Better card Deal in few<br />Easy Steps.
+                </h3>
+                <ng-container *ngFor="let item of cardDealParagraphs">
+                    <div class="text-[13px] text-[#1a1a1a] font-semibold mb-2">{{ item.title }}</div>
+                    <p class="text-[11px] text-[#6b6b6b] max-w-[350px] mb-6">{{ item.text }}</p>
+                </ng-container>
+            </div>
+
+<div class="relative w-fit mx-auto mt-10">
+  <!-- Primera imagen (debajo) -->
+  <img
+    [src]="cardImages[0].src"
+    [alt]="cardImages[0].alt"
+    class="rounded-md shadow-md w-[250px] h-auto relative z-10"
+  />
+
+  <!-- Segunda imagen (encima) -->
+  <img
+    [src]="cardImages[1].src"
+    [alt]="cardImages[1].alt"
+    class="rounded-md shadow-md w-[250px] h-auto absolute top-10 left-20 z-20"
+  />
+
+  <!-- Elemento decorativo con líneas onduladas -->
+  <div class="absolute top-16 left-36 z-0">
+    <svg width="100" height="100" viewBox="0 0 100 100" class="text-[#f15a29]">
+      <path
+        d="M0,20 C20,40 40,0 60,20 C80,40 100,0 120,20"
+        stroke="currentColor"
+        fill="transparent"
+        stroke-width="4"
+      />
+      <path
+        d="M0,40 C20,60 40,20 60,40 C80,60 100,20 120,40"
+        stroke="currentColor"
+        fill="transparent"
+        stroke-width="4"
+      />
+    </svg>
+  </div>
+
+  <!-- Elemento decorativo con puntos -->
+  <div class="absolute bottom-[-10px] left-[-10px] z-0 grid grid-cols-4 gap-1">
+    <span *ngFor="let dot of [].constructor(16)" class="w-1.5 h-1.5 bg-[#4b3bff] rounded-full"></span>
+  </div>
+</div>
+
+
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="mt-24 max-w-[900px] mx-auto px-4 sm:px-0 text-center">
+            <div class="text-[11px] font-semibold text-[#2e2e7e] mb-2 tracking-widest">TESTIMONIALS</div>
+            <h3 class="text-lg font-extrabold max-w-[350px] leading-tight mx-auto mb-3">
+                What our trusted<br />client say
+            </h3>
+            <p class="text-[11px] text-[#6b6b6b] max-w-[500px] mx-auto mb-10">
+                Community development is often linked with community work or community planning, and may involve
+                stakeholders, foundations,
+            </p>
+
+            <div class="bg-[#d9d8f3] rounded-md p-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[900px] mx-auto">
+                <div *ngFor="let t of testimonials | slice:currentIndex:currentIndex + testimonialsPerPage"
+                    class="bg-white rounded-md p-4 text-left shadow-sm">
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-400 text-sm mr-2">
+                            {{ '★'.repeat(t.stars) }}
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-[#6b6b6b] mb-4">{{ t.text }}</p>
+                    <div class="text-[11px] font-semibold text-[#1a1a1a]">{{ t.name }}</div>
+                    <div class="text-[10px] text-[#6b6b6b]">{{ t.role }}</div>
+                </div>
+            </div>
+
+            <!-- Botones para navegar entre los testimonios -->
+            <div class="text-center mt-6">
+                <button (click)="showPrevious()" aria-label="Previous testimonial"
+                    class="bg-[#4b3bff] text-white rounded px-3 py-1 hover:bg-[#3a2ecc] transition">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <button (click)="showNext()" aria-label="Next testimonial"
+                    class="bg-[#4b3bff] text-white rounded px-3 py-1 hover:bg-[#3a2ecc] transition ml-4">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Newsletter Section -->
+        <section class="mt-20 max-w-[600px] mx-auto px-4 sm:px-0 text-center">
+            <h3 class="text-xl font-extrabold mb-3">
+                Subscribe to our Newsletter
+            </h3>
+            <p class="text-[13px] text-[#6b6b6b] mb-6">
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+            </p>
+            <form class="flex max-w-[400px] mx-auto" onsubmit="event.preventDefault()">
+                <input aria-label="Enter your email"
+                    class="flex-grow border border-gray-300 rounded-l-md px-4 py-2 text-[13px] focus:outline-none focus:ring-2 focus:ring-[#4b3bff]"
+                    placeholder="Enter your email" required type="email" />
+                <button
+                    class="bg-[#4b3bff] text-white px-5 py-2 rounded-r-md text-[13px] font-semibold hover:bg-[#3a2ecc] transition"
+                    type="submit">
+                    Subscribe
+                </button>
+            </form>
+        </section>
