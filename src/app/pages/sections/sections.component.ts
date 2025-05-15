@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-sections',
   imports: [CommonModule, FormsModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  templateUrl: './sections.component.html',
+  styleUrl: './sections.component.css'
 })
-export class HeroComponent {
+export class SectionsComponent {
   buttons = [
     {
       text: 'Get started',

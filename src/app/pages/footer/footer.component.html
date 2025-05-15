@@ -1,0 +1,36 @@
+<!-- Footer -->
+<footer class="bg-[#4b3bff] text-white mt-20 py-10 px-6 sm:px-10">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-5 gap-8 text-[11px]">
+        <ng-container *ngFor="let section of footerSections">
+            <div>
+                <h4 class="font-semibold mb-3">{{ section.title }}</h4>
+                <ul class="space-y-1">
+                    <li *ngFor="let link of section.links">{{ link }}</li>
+                </ul>
+            </div>
+        </ng-container>
+
+        <div class="col-span-2">
+            <h4 class="font-semibold mb-3">Get in touch</h4>
+            <p class="text-[11px] mb-3">
+                You’ll find your next freelancers with 100% power
+            </p>
+            <form class="flex max-w-[300px]" onsubmit="event.preventDefault()">
+                <input aria-label="Enter your email for contact"
+                    class="flex-grow rounded-l-md px-3 py-1 text-[#4b3bff] focus:outline-none"
+                    placeholder="Enter your email" required type="email" />
+                <button
+                    class="bg-white text-[#4b3bff] rounded-r-md px-3 py-1 font-semibold hover:bg-[#e0dfff] transition"
+                    type="submit">
+                    Go
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="mt-8 font-bold text-lg">
+        SAAS
+    </div>
+    <div class="text-[10px] mt-2 opacity-70">
+        Copyright Saas.com. All rights reserved
+    </div>
+</footer>
