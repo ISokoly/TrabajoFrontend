@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
   footerSections = [
     {
       title: 'Services',

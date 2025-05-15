@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  
   navLinks = [
     { label: 'About', href: '#', classes: 'hover:underline' },
     { label: 'Clients', href: '#', classes: 'hover:underline' },

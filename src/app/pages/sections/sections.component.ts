@@ -55,7 +55,6 @@ export class SectionsComponent {
       text: '24/24'
     }
   ];
-  
   logos = [
     { alt: 'MeUndies logo in gray', src: 'https://storage.googleapis.com/a1aa/image/cfdf6b0a-5c61-4155-2f41-4b0abd6db94c.jpg' },
     { alt: 'Slack logo in gray', src: 'https://storage.googleapis.com/a1aa/image/d169b997-1e7b-4fb6-484b-3805dcd69902.jpg' },

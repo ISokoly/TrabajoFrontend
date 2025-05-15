@@ -12,5 +12,4 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-
 }

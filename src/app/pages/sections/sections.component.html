@@ -24,7 +24,6 @@
             <div class="md:w-1/2 relative">
                 <div class="absolute top-0 right-0 w-[280px] h-[280px] rounded-full bg-gradient-to-b from-[#4b3bff] to-[#1a1a4a] -z-10"
                     style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%)"></div>
-
                 <div class="grid grid-cols-2 gap-6">
                     <div *ngFor="let card of dataCards" class="bg-white rounded-lg p-4 shadow-md"
                         [ngClass]="{'flex flex-col justify-center': card.type === 'slider', 'flex flex-col items-center': card.text, '': !card.text && card.type !== 'slider'}">
